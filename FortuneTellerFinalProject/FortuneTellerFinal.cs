@@ -135,7 +135,7 @@ namespace FortuneTeller
             {
                 amountOfMoney = 0;
             }
-            Console.WriteLine("with $" + amountOfMoney);
+            Console.WriteLine("with $" + amountOfMoney + " in the bank,");
 
             //Processing siblings
             //Use number of siblings to determine vacation home
