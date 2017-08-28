@@ -41,7 +41,7 @@ namespace FortuneTeller
             //userAge = int.Parse(Console.ReadLine());
             string strUserAge;
             int numUserAge;
-            Console.WriteLine("Please enter your age");
+            Console.WriteLine("\nPlease enter your age");
             strUserAge = Console.ReadLine();
             if (strUserAge.ToLower() == "quit")
             {
@@ -57,7 +57,7 @@ namespace FortuneTeller
             //birthMonth = int.Parse(Console.ReadLine());
             string strBirthMonth;
             int birthMonth;
-            Console.WriteLine("Please enter your birth month using a number");
+            Console.WriteLine("\nPlease enter your birth month using a number");
             strBirthMonth = Console.ReadLine();
             if (strBirthMonth.ToLower() == "quit")
             {
@@ -67,13 +67,13 @@ namespace FortuneTeller
             birthMonth = int.Parse(strBirthMonth);
 
             //Ask the user for the user’s favorite ROYGBIV color (if statement)
-            Console.WriteLine("What is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors");
+            Console.WriteLine("\nWhat is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors");
             string color = Console.ReadLine();
 
             //Changing color to lowercase then perform lowercase comparison.
             if (color.ToLower() == "help")
             {
-                Console.WriteLine("These are the colors of ROYGBIV:\n Red\n Orange\n Yellow\n Green\n Blue\n Indigo\n Violet\n");
+                Console.WriteLine("\nThese are the colors of ROYGBIV:\n Red\n Orange\n Yellow\n Green\n Blue\n Indigo\n Violet");
                 Console.WriteLine("Please enter a ROYGBIV color from the colors above");
                 color = Console.ReadLine();
             }
@@ -91,7 +91,7 @@ namespace FortuneTeller
             //Console.WriteLine();
             string strNumOfSiblings;
             int numOfSiblings;
-            Console.WriteLine("How many siblings do you have?");
+            Console.WriteLine("\nHow many siblings do you have?");
             strNumOfSiblings = Console.ReadLine();
             if(strNumOfSiblings.ToLower() == "quit")
             {
@@ -102,7 +102,7 @@ namespace FortuneTeller
 
             //Processing retire in year
             //Use rather user age is an even or odd number to determine when they will retire
-            Console.Write("Sonja Smith ");
+            Console.Write("\nSonja Smith ");
             int retireInYears = 0; //variable initialization
             if (numUserAge % 2 == 0) //evaluate
             {
@@ -135,7 +135,7 @@ namespace FortuneTeller
             {
                 amountOfMoney = 0;
             }
-            Console.WriteLine("with $" + amountOfMoney + " in the bank,");
+            Console.WriteLine("with $" + amountOfMoney + " in the bank, ");
 
             //Processing siblings
             //Use number of siblings to determine vacation home
@@ -197,7 +197,7 @@ namespace FortuneTeller
             {
                 modeOfTransportation = "Van";
             }
-            Console.Write(" and a " + modeOfTransportation + ".");
+            Console.Write(" and a " + modeOfTransportation + ".\n\n");
 
             //Use SWITCH CASE to ask the user for the user’s favorite ROYGBIV color
             //Console.WriteLine("What is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors");
