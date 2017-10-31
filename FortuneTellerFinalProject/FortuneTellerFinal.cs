@@ -22,26 +22,34 @@ namespace FortuneTeller
             //Welcome Screen
             Console.WriteLine("Welcome I'm Sonja your favorite Fortune Teller!");
             Console.WriteLine();
-            Console.WriteLine("You may exit anytime by typing quit");
+            Console.WriteLine("You may exit anytime by typing quit.");
+            Console.WriteLine();
                                 
-            //Ask the user for the user’s full name
-            string firstLastName;
-            Console.WriteLine("Please enter your first and last name: ");
-            firstLastName = Console.ReadLine();
-            if (firstLastName.ToLower() == "quit")
+            //Ask the user for the user’s first name
+            string firstName;
+            Console.WriteLine("Please enter your first name: ");
+            firstName = Console.ReadLine();
+            if (firstName.ToLower() == "quit")
             {
                 Console.WriteLine("Nobody likes a quitter looser...");
                 System.Environment.Exit(0);
             }
 
-            //Ask the user for the user’s age
-            //Convert int to a string
-            //int numUserAge;
+            string lastName;
+            Console.WriteLine("\nPlease enter your last name: ");
+            lastName = Console.ReadLine();
+            if (lastName.ToLower() == "quit")
+            {
+                Console.WriteLine("Nobody likes a quitter looser...");
+                System.Environment.Exit(0);
+            }
+
+            //Ask the user for the user’s age. Convert int to a string int numUserAge;
             //Console.WriteLine("Please enter your age");
             //userAge = int.Parse(Console.ReadLine());
             string strUserAge;
             int numUserAge;
-            Console.WriteLine("\nPlease enter your age");
+            Console.WriteLine("\nPlease enter your age: ");
             strUserAge = Console.ReadLine();
             if (strUserAge.ToLower() == "quit")
             {
@@ -57,7 +65,7 @@ namespace FortuneTeller
             //birthMonth = int.Parse(Console.ReadLine());
             string strBirthMonth;
             int birthMonth;
-            Console.WriteLine("\nPlease enter your birth month using a number");
+            Console.WriteLine("\nPlease enter your birth month using a number: ");
             strBirthMonth = Console.ReadLine();
             if (strBirthMonth.ToLower() == "quit")
             {
@@ -67,14 +75,14 @@ namespace FortuneTeller
             birthMonth = int.Parse(strBirthMonth);
 
             //Ask the user for the user’s favorite ROYGBIV color (if statement)
-            Console.WriteLine("\nWhat is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors");
+            Console.WriteLine("\nWhat is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors: ");
             string color = Console.ReadLine();
 
             //Changing color to lowercase then perform lowercase comparison.
             if (color.ToLower() == "help")
             {
                 Console.WriteLine("\nThese are the colors of ROYGBIV:\n Red\n Orange\n Yellow\n Green\n Blue\n Indigo\n Violet");
-                Console.WriteLine("Please enter a ROYGBIV color from the colors above");
+                Console.WriteLine("Please enter a ROYGBIV color from the colors above: ");
                 color = Console.ReadLine();
             }
             if (color.ToLower() == "quit")
@@ -93,6 +101,7 @@ namespace FortuneTeller
             int numOfSiblings;
             Console.WriteLine("\nHow many siblings do you have?");
             strNumOfSiblings = Console.ReadLine();
+            Console.WriteLine();
             if(strNumOfSiblings.ToLower() == "quit")
             {
                 Console.WriteLine("Nobody likes a quitter looser...");
@@ -102,7 +111,7 @@ namespace FortuneTeller
 
             //Processing retire in year
             //Use rather user age is an even or odd number to determine when they will retire
-            Console.Write("\nSonja Smith ");
+            Console.Write(firstName + " " + lastName + " ");
             int retireInYears = 0; //variable initialization
             if (numUserAge % 2 == 0) //evaluate
             {
@@ -121,15 +130,15 @@ namespace FortuneTeller
             float amountOfMoney = 0;
             if (birthMonth >= 1 && birthMonth <= 4)
             {
-                amountOfMoney = 50000;
+                amountOfMoney = 5000000;
             }
             if (birthMonth >= 5 && birthMonth <= 8)
             {
-                amountOfMoney = 10000;
+                amountOfMoney = 1000000;
             }
             if (birthMonth >= 9 && birthMonth <= 12)
             {
-                amountOfMoney = 5000;
+                amountOfMoney = 250000;
             }
             if (birthMonth < 01 && birthMonth <= 12)
             {
@@ -198,42 +207,6 @@ namespace FortuneTeller
                 modeOfTransportation = "Van";
             }
             Console.Write(" and a " + modeOfTransportation + ".\n\n");
-
-            //Use SWITCH CASE to ask the user for the user’s favorite ROYGBIV color
-            //Console.WriteLine("What is your favorite ROYGBIV color? Enter 'Help' for a list of ROYGBIV colors");
-            //string color = Console.ReadLine();
-            //string response = "";
-            //switch (color)
-            //    {
-            //        case "help":
-            //            response = "Please choose from the following colors:\n red\n orange\n yellow\n green\n blue\n indigo\n violet\n";
-            //            break;
-            //        case "red":
-            //            response = "red";
-            //            break;
-            //        case "orange":
-            //            response = "orange";
-            //            break;
-            //        case "yellow":
-            //            response = "yellow";
-            //            break;
-            //        case "green":
-            //            response = "green";
-            //            break;
-            //        case "blue":
-            //            response = "blue";
-            //            break;
-            //        case "indigo":
-            //            response = "indigo";
-            //            break;
-            //        case "violet":
-            //            response = "violet";
-            //            break;
-            //        default:
-            //            response = "You fail at colors. Try again.";
-            //            break;
-            //    }
-            //       Console.WriteLine(response);
 
         }
     }
